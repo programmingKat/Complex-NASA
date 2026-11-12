@@ -1,22 +1,38 @@
-# 🚀 Project: Complex NASA API
+# NASA Facilities Weather
 
-### Goal: Use NASA's API to return all of their facility locations (~400). Display the name of the facility, its location, and the weather at the facility currently. 
+A dashboard that lists NASA's facilities along with the current weather at each one, for space fans curious about conditions at sites across the country.
 
-### How to submit your code for review:
+**Live app:** [https://your-link-here](https://your-link-here)
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+![Screenshot of the main screen](./screenshots/main.png)
 
-Example:
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+## Goal
+
+I built this to practice working with a large dataset and chaining API calls. When the page loads, the app fetches NASA's list of roughly 400 facilities, then uses each facility's latitude and longitude to request its current weather. Each facility gets a card showing its center, facility name, and current conditions.
+
+## Tech Stack
+
+- **Front end:** HTML, CSS, JavaScript (Fetch API, promises, DOM manipulation)
+- **APIs:** NASA facilities dataset (through a CORS proxy), [WeatherAPI](https://www.weatherapi.com/)
+- **Hosting:** [GitHub Pages / Netlify / Vercel / Render]
+
+## How to Use
+
+1. Open the [live app](https://your-link-here).
+2. Wait a moment while the facilities and their weather load.
+3. Scroll through the cards to see each facility's center, name, and current weather.
+
+## Live App
+
+**Link:** [https://your-link-here](https://your-link-here)
+
+| Facility List | Facility Card |
+| --- | --- |
+| ![List of NASA facilities](./screenshots/one.png) | ![Facility card with current weather](./screenshots/two.png) |
+
+## Future Improvements
+
+- Move the weather API key out of the front-end code so it is not public
+- Add a dropdown to show facilities in batches of 100 instead of loading all of them at once
+- Show a loading message while the data is fetched
+- Display more weather details, such as temperature
