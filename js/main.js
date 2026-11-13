@@ -71,7 +71,7 @@ function getWeather(lat, long) {
     let result = {}
     // https://api.openweathermap.org/data/4.0/onecall/current?lat=52.2297&lon=21.0122&units=metric&lang=en&appid={API key} 
     // https://api.openweathermap.org/data/4.0/onecall/current?lat={lat}&lon={lon}&appid={API key}
-    return fetch(`http://api.weatherapi.com/v1/current.json?key=${weatherAPIKEY}&q=${lat},${long}`)
+    return fetch(`https://api.weatherapi.com/v1/current.json?key=${weatherAPIKEY}&q=${lat},${long}`)
         .then(result => result.json())
         .then(data => {
             //console.log("weather data", data)
@@ -80,7 +80,7 @@ function getWeather(lat, long) {
             //map
         })
         .catch(err => {
-            console.log(`error:${err}`)
+            console.log(err)
         })
 
 }
