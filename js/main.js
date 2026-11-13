@@ -8,8 +8,8 @@
 // 100 , 200, 300, 400, 500
 
 //document.querySelector('button').addEventListener('click', run)
-//https://cors.io/?url=
-const nasaURL = 'https://data.nasa.gov/docs/legacy/gvk9-iz74.json'
+//
+const nasaURL = 'https://cors.io/?url=https://data.nasa.gov/docs/legacy/gvk9-iz74.json'
 const weatherAPIKEY = 'a1e6951b7a414f8faa0180642262209'
 
 function getFacilities() {
@@ -61,7 +61,7 @@ function getFacilities() {
             return arrCenters
         })
         .catch(err => {
-            console.log(`Error: ${err}`);
+            console.log(err);
 
         })
     return res
